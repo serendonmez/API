@@ -70,7 +70,7 @@ public class C16_Put_SoftAssertIleExpectedDataTesti {
         //3
         Response response= given().contentType(ContentType.JSON)
                 .when().body(requestBody.toString())
-                .post(url);
+                .put(url);
 
         // 4
 
