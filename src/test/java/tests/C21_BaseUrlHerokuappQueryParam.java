@@ -96,11 +96,5 @@ public class C21_BaseUrlHerokuappQueryParam extends BaseUrlHeroKuApp {
 
 
 
-
-
-
-
-
-
     }
 }
