@@ -2,6 +2,9 @@ package testDatalari;
 
 import org.json.JSONObject;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class TestDataJsonPlaceHolder {
 
     public static int basariliSorguStatusCode=200;
@@ -38,6 +41,28 @@ public class TestDataJsonPlaceHolder {
 
         return expectedData;
 
+    }
+
+
+    public static Map<String, Object> bodyOlustur(){
+
+        Map<String, Object> bodyMap=new HashMap<>();
+        bodyMap.put("title","Ahmet");
+        bodyMap.put("body","Merhaba");
+        bodyMap.put("userId",10.0);
+        bodyMap.put("id",70.0);
+            /*
+             Expected Data:
+                    {
+                        "title":"Ahmet",
+                        "body":"Merhaba",
+                        "userId":10,
+                        "id":70
+                    }
+
+             */
+
+        return bodyMap;
     }
 
 
