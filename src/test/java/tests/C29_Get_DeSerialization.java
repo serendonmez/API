@@ -1,9 +1,7 @@
 package tests;
 
-import baseURL.BaseURlDummyExm;
-import io.restassured.http.ContentType;
+import baseURL.BaseURlDummy;
 import io.restassured.response.Response;
-import org.junit.Assert;
 import org.junit.Test;
 import testDatalari.TestDatalariDummy;
 
@@ -13,7 +11,7 @@ import java.util.Map;
 import static io.restassured.RestAssured.given;
 import static org.testng.AssertJUnit.assertEquals;
 
-public class C29_Get_DeSerialization extends BaseURlDummyExm {
+public class C29_Get_DeSerialization extends BaseURlDummy {
 
     @Test
     public void test(){
@@ -46,7 +44,7 @@ public class C29_Get_DeSerialization extends BaseURlDummyExm {
 
 
         //1
-        specDummyUrl.pathParams("pp1","employee","pp2",3);
+        specBaseUrlDummy.pathParams("pp1","employee","pp2",3);
 
         //2 expected Body
 
@@ -56,7 +54,7 @@ public class C29_Get_DeSerialization extends BaseURlDummyExm {
 
         // 3 req send response save
 
-        Response response=given().spec(specDummyUrl)
+        Response response=given().spec(specBaseUrlDummy)
                 .when().get("/{pp1}/{pp2}");
 
 

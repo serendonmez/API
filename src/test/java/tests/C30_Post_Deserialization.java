@@ -1,9 +1,8 @@
 package tests;
 
-import baseURL.HeroKuurlSil;
+import baseURL.BaseUrlHeroKuApp;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import org.junit.Assert;
 import org.junit.Test;
 import testDatalari.TestDatalariHeroKu;
 
@@ -13,7 +12,7 @@ import java.util.Map;
 import static io.restassured.RestAssured.given;
 import static org.testng.AssertJUnit.assertEquals;
 
-public class C30_Post_Deserialization extends HeroKuurlSil {
+public class C30_Post_Deserialization extends BaseUrlHeroKuApp {
 
     /*
     https://restful-booker.herokuapp.com/booking url’ine asagidaki
@@ -59,7 +58,7 @@ public class C30_Post_Deserialization extends HeroKuurlSil {
     public void test(){
 
         //1
-        specUrl.pathParam("pp1","booking");
+        specHeroKuApp.pathParam("pp1","booking");
 
         Map<String, Object> requestBodyMap= TestDatalariHeroKu.reqBodyMapOlustur("Ahmet","Bulut",
                 500.0,false,"2021-06-01","2021-06-10","wi-fi");
@@ -74,7 +73,7 @@ public class C30_Post_Deserialization extends HeroKuurlSil {
 
         //3
         Response response= given()
-                .spec(specUrl)
+                .spec(specHeroKuApp)
                 .contentType(ContentType.JSON)
                 .when()
                 .body(requestBodyMap)

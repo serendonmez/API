@@ -1,19 +1,17 @@
 package tests;
 
-import baseURL.BaseUrlHeroKu;
+import baseURL.BaseUrlHeroKuApp;
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.json.JSONObject;
-import org.junit.Assert;
 import org.junit.Test;
 import testDatalari.TestDatalariHeroKu;
 
 import static io.restassured.RestAssured.given;
-import static io.restassured.RestAssured.responseSpecification;
 import static org.testng.AssertJUnit.assertEquals;
 
-public class C27_Post_TestDataKullanimi extends BaseUrlHeroKu {
+public class C27_Post_TestDataKullanimi extends BaseUrlHeroKuApp {
 
     /*
     https://restful-booker.herokuapp.com/booking url’ine
@@ -62,7 +60,7 @@ public class C27_Post_TestDataKullanimi extends BaseUrlHeroKu {
 
         //1 url request hazirlama
 
-        specBaseUrlHero.pathParam("pp1","booking");
+        specHeroKuApp.pathParam("pp1","booking");
         /*
         Request body
             {
@@ -94,7 +92,7 @@ public class C27_Post_TestDataKullanimi extends BaseUrlHeroKu {
 
         //3 Req gönder Resp kaydet
 
-        Response response= given().when().spec(specBaseUrlHero).contentType(ContentType.JSON).body(requestBody.toString()).post("/{pp1}");
+        Response response= given().when().spec(specHeroKuApp).contentType(ContentType.JSON).body(requestBody.toString()).post("/{pp1}");
 
 
 
