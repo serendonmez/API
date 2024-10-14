@@ -1,11 +1,19 @@
 package testDatalari;
 
 import org.json.JSONObject;
+import pojos.PojoHeroKuAppResponseBody;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class TestDatalariHeroKu {
+
+
+
+    public static int basarilistatusCode=200;
+    public static String contentType= "application/json; charset=utf-8";
+
+    public static String header="keep-alive";
 
 
 

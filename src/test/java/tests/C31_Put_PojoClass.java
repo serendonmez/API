@@ -3,16 +3,14 @@ package tests;
 import baseURL.BaseUrlJsonPlaceHolderAPI;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+
 import org.junit.Assert;
 import org.junit.Test;
 import pojos.PojoJsonPlaceHolder;
 import testDatalari.TestDataJsonPlaceHolder;
-
-import java.util.HashMap;
-import java.util.Map;
-
 import static io.restassured.RestAssured.given;
 import static org.testng.AssertJUnit.assertEquals;
+
 
 public class C31_Put_PojoClass extends BaseUrlJsonPlaceHolderAPI {
 
@@ -91,6 +89,7 @@ public class C31_Put_PojoClass extends BaseUrlJsonPlaceHolderAPI {
         assertEquals(expectedData.getBody(),responsePojo.getBody());
         assertEquals(expectedData.getUserId(),responsePojo.getUserId());
         assertEquals(expectedData.getId(),responsePojo.getId());
+
 
 
     }
