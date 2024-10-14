@@ -12,7 +12,7 @@ import java.util.Map;
 import static io.restassured.RestAssured.given;
 import static org.testng.AssertJUnit.assertEquals;
 
-public class C30_Post_Deserialization extends BaseUrlHeroKuApp {
+public class C30_Post_DeSerialization extends BaseUrlHeroKuApp {
 
     /*
     https://restful-booker.herokuapp.com/booking url’ine asagidaki
