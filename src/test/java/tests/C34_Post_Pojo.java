@@ -115,6 +115,7 @@ public class C34_Post_Pojo {
 
         PojoOWeather responsePojo=response.as(PojoOWeather.class);
 
+
         // response i Pojo ya cevirdigimizde tüm bilgileri getirirse
         // responsePojo yu assertion da kullanabiliriz
         // Eger null deger dönerse response i JsonPath e cast edip
