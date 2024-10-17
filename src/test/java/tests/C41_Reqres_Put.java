@@ -4,12 +4,12 @@ import baseURL.BaseUrlReqres;
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
-import org.hamcrest.Matchers;
+
 import org.json.JSONObject;
 import org.junit.Assert;
 import org.junit.Test;
 import pojos.PojoReqresResponseBody;
-import pojos.pojosOpenWeather.PojoOWeather;
+
 
 import static io.restassured.RestAssured.given;
 
@@ -42,10 +42,7 @@ public class C41_Reqres_Put extends BaseUrlReqres {
 
 
 
-        PojoReqresResponseBody responsePojo=response.as(PojoReqresResponseBody.class);
-
-
-
+         // PojoReqresResponseBody responsePojo=response.as(PojoReqresResponseBody.class);
         //   System.out.println(responsePojo); -->PojoReqresResponseBody{name='null', job='null'}
 
         JsonPath responseJP=response.jsonPath();
